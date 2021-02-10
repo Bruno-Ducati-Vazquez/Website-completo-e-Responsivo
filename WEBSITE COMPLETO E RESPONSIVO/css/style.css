@@ -1,0 +1,242 @@
+/*Resetando as estilizações do documento*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.center{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.Menu-Mobile{
+    display: none;
+}
+
+header{
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+
+.logo{
+    color:#16507b;
+}
+
+.logo h2{
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.menu{
+    width: 80%;
+    text-align: right;
+}
+.menu a{
+    color: #124265;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 30px;
+    /*O atributo transition permitem que você altere os valores das propriedades suavemente, durante um determinado período */
+    transition: 0.4s;
+}
+
+.menu a:hover{
+    color: #007bff;
+}
+
+.menu .btn-menu{
+    background-color: #007bff;;
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    /*O atributo border-radius faz com que fique uma borda circular no botão*/
+    border-radius: 8px;
+}
+
+.menu .btn-menu:hover{
+    background-color: #124265;
+    color: white;
+}
+
+/*Section Main*/
+
+section .main{
+    background-image: url('img/hero-bg.jpg');
+    padding: 70px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main_cta{
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.main_cta h2{
+    color: #16507b;
+    font-size: 40px;
+}
+
+.main_cta p{
+    color: grey;
+    font-size: 19px;
+    margin: 18px 0;
+}
+
+.main_cta button{
+    background-color: #007bff;;
+    display: inline-block;
+    padding: 8px 30px;
+    color: white;
+    /*O atributo border-radius faz com que fique uma borda circular no botão*/
+    border-radius: 8px;
+    font-size: 16px;
+    border: 0;
+    /* Para o usuario saber que o botão é clicavel*/
+    cursor: pointer;
+}
+.main_cta button:hover{
+    background-color: #007bff;
+    color: white;
+}
+
+.diferenciais{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+.diferencial-single{
+    border-radius: 10px;
+    background-color: white;
+    width: 23%;
+    margin-right: 2%;
+    padding: 50px 20px;
+}
+
+.diferencial-single i{
+    color: #124265;
+    font-size: 23px;
+
+
+}
+
+.diferencial-single h2{
+    color: #124265;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.diferencial-single p{
+    color: gray;
+    font-size: 14px;
+    line-height: 30px;
+} 
+
+section .sobre{
+    padding: 80px 0;
+}
+
+.chamada-sobre{
+    width: 100%;
+    text-align: center;
+}
+
+.chamada-sobre h2{
+    /*Deixa as todas as letras em maisculo*/
+    text-transform: uppercase;
+    color: #124265;
+}
+.chamada-sobre p{
+    font-size: 14px;
+    color: gray;
+    margin: 10px 0 ;
+
+}
+
+.conteudo-sobre{
+    display: flex;
+    flex-wrap: wrap ;
+
+}
+
+.conteudo-sobre p{
+    width: 48%;
+    margin-right: 2%;
+    color: #444444;
+}
+.conteudo-sobre span{
+    display: inline-block;
+    width: 100%;
+    margin: 0 10px;
+    text-align: left;
+
+}
+
+.conteudo-sobre i{
+    color: #007bff;
+}
+
+.conteudo-sobre button:hover{
+    background-color: #007bff;
+    color: white;
+}
+
+section.conquistas{
+    background-color: #f8fbfe;
+    padding: 20px 0;
+}
+
+.conquista-single{
+    /*caso queira colocar em conteinares é ncessario fazer um calculo que é (100%/quantidade de boxes que deseja), depois com o resultado faça o width ser a maior parte e o margin a menos parte*/
+    width: 22%;
+    margin-right: 3%;
+    text-align: center;
+    color: #124265;
+}
+
+.conquista-single h2{
+   font-size: 30px;
+
+}
+
+/*Responsive Part*/
+
+@media screen and (max-width:768px){
+    .diferencial-single{
+        width: 100%;
+        margin-bottom: 20px;
+        
+    }
+    .menu{
+        display: none;
+    }
+    .logo{
+        width: 20%;
+    }
+    .Menu-Mobile{
+        width: 80%;
+        text-align: right;
+        display: block;
+    }
+    .conquista-single{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .Menu-Mobile i{
+        cursor: pointer;
+        font-size: 23px;
+        margin-top: 8px;
+    }
+    .conteudo-sobre  p{width: 100%; margin: 20px 20px;}
+}
